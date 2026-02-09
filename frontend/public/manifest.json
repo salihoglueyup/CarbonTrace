@@ -1,0 +1,45 @@
+{
+    "name": "CBAM Guard",
+    "short_name": "CBAM",
+    "description": "AB Karbon Sınır Düzenleme Mekanizması Yönetim Platformu",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#00874A",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/screenshot-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ],
+    "categories": [
+        "business",
+        "finance",
+        "productivity"
+    ],
+    "lang": "tr",
+    "dir": "ltr"
+}

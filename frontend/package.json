@@ -1,0 +1,40 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:clean": "rimraf node_modules/.vite && vite",
+    "dev:force": "vite --force",
+    "build": "vite build",
+    "build:clean": "rimraf dist && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "clean": "rimraf node_modules/.vite dist",
+    "clean:all": "rimraf node_modules/.vite dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.24",
+    "axios": "^1.13.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "react-router-dom": "^7.12.0",
+    "rimraf": "^6.1.2",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
+  }
+}

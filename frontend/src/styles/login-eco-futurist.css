@@ -1,0 +1,406 @@
+/* ============================================
+   CBAM Guard - Eco-Futurist Login Theme 🌿🤖
+   ============================================ */
+
+/* --- Dynamic Background --- */
+.eco-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #002d1b;
+    /* Very Dark Green Fallback */
+    font-family: 'Inter', sans-serif;
+    /* Modern Font */
+}
+
+/* Mesh Gradient Animation */
+.eco-bg-mesh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background:
+        radial-gradient(at 0% 0%, hsla(153, 100%, 26%, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(140, 100%, 20%, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(153, 100%, 15%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(160, 100%, 25%, 1) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, hsla(153, 100%, 10%, 1) 0px, transparent 50%);
+    filter: blur(60px);
+    animation: meshFlow 20s infinite alternate linear;
+    opacity: 0.8;
+}
+
+@keyframes meshFlow {
+    0% {
+        transform: scale(1);
+        filter: blur(60px) hue-rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: blur(80px) hue-rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(60px) hue-rotate(0deg);
+    }
+}
+
+/* --- Floating Particles (Digital Leaves) --- */
+.eco-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    animation: floatUp linear infinite;
+}
+
+.particle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    bottom: -80px;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 20%;
+    bottom: -40px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    width: 120px;
+    height: 120px;
+    left: 35%;
+    bottom: -120px;
+    animation-duration: 20s;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    bottom: -60px;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    left: 65%;
+    bottom: -30px;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    left: 80%;
+    bottom: -90px;
+    animation-duration: 22s;
+    animation-delay: 5s;
+}
+
+.particle:nth-child(7) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    bottom: -50px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* --- Glassmorphism Card --- */
+.eco-glass-card {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.03);
+    /* Ultra transparent */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.eco-glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Typography & Elements inside Card --- */
+.eco-brand {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.eco-logo {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 127, 0.3));
+    animation: pulse-glow 3s infinite;
+}
+
+.eco-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.5px;
+    background: linear-gradient(to right, #ffffff, #a3ffa3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eco-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+/* Form Styles */
+.eco-input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.eco-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.eco-input-wrapper {
+    position: relative;
+}
+
+.eco-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.eco-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    color: white;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.eco-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.eco-input:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+    border-color: #00AA5E;
+    box-shadow: 0 0 0 4px rgba(0, 170, 94, 0.15);
+}
+
+.eco-input:focus+.eco-input-icon,
+.eco-input:focus~.eco-input-icon {
+    color: #00AA5E;
+}
+
+/* Actions */
+.eco-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+}
+
+.eco-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.eco-checkbox input {
+    accent-color: #00AA5E;
+    width: 16px;
+    height: 16px;
+}
+
+.eco-link {
+    color: #00AA5E;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.eco-link:hover {
+    color: #4ade80;
+    text-decoration: underline;
+}
+
+/* Button */
+.eco-btn-primary {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00874A 0%, #005C36 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 135, 74, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.eco-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 135, 74, 0.4);
+    background: linear-gradient(135deg, #009E57 0%, #006F41 100%);
+}
+
+.eco-btn-primary:active {
+    transform: translateY(0);
+}
+
+.eco-btn-guest {
+    width: 100%;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.eco-btn-guest:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+.eco-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations Utility */
+.animate-in {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 15px rgba(0, 255, 127, 0.3));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 127, 0.6));
+        transform: scale(1.05);
+    }
+}

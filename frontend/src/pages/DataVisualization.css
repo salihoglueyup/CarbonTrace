@@ -1,0 +1,320 @@
+/* DataVisualization.css */
+
+/* Scoped Layout Reset */
+.viz-page-container {
+    padding: 2rem;
+    background-color: #f8fafc;
+    /* gray-50 */
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #1e293b;
+    /* dark */
+}
+
+.viz-max-width {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.viz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.viz-title h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.viz-title p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.viz-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    border: 1px solid #dbeafe;
+}
+
+/* KPI Grid */
+.viz-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* KPI Card Overrides */
+.viz-kpi-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.viz-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.viz-kpi-icon-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    opacity: 0.1;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.viz-kpi-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.viz-kpi-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.viz-kpi-unit {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+/* Text Colors */
+.text-bbva-blue {
+    color: #004481;
+}
+
+.text-bbva-green {
+    color: #00874A;
+}
+
+.text-bbva-orange {
+    color: #F39200;
+}
+
+.text-bbva-red {
+    color: #E53E3E;
+}
+
+.text-bbva-purple {
+    color: #805ad5;
+}
+
+/* Main Content Layout */
+.viz-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    min-height: 600px;
+}
+
+@media (min-width: 1024px) {
+    .viz-content-grid {
+        grid-template-columns: 2fr 1fr;
+        /* 8 cols / 4 cols equivalent */
+    }
+}
+
+/* Charts Section */
+.viz-charts-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+/* Tab Menu */
+.viz-tabs {
+    display: inline-flex;
+    background-color: #f1f5f9;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.viz-tab-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    color: #64748b;
+    background: transparent;
+}
+
+.viz-tab-btn:hover {
+    color: #334155;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.viz-tab-btn.active {
+    background-color: white;
+    color: #0f172a;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Container */
+.viz-chart-card {
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.viz-chart-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    background-color: #f8fafc;
+}
+
+.viz-chart-body {
+    padding: 1.5rem;
+    flex: 1;
+    min-height: 400px;
+}
+
+/* Insight Panel */
+.viz-insight-col {
+    height: 100%;
+    /* Align with tabs offset approx */
+    padding-top: 3.5rem;
+}
+
+@media (max-width: 1024px) {
+    .viz-insight-col {
+        padding-top: 0;
+    }
+}
+
+.viz-insight-card {
+    background: linear-gradient(135deg, #004481 0%, #1e3a8a 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.viz-insight-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.viz-glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.viz-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+}
+
+.viz-insight-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    color: #bfdbfe;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.viz-insight-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Loading State */
+.viz-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.viz-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 4px solid #e2e8f0;
+    border-top-color: #00874A;
+    border-radius: 50%;
+    animation: viz-spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes viz-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Utilities not in standard CSS */
+.viz-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

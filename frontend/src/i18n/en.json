@@ -1,0 +1,128 @@
+{
+    "app": {
+        "title": "CarbonTrace",
+        "subtitle": "Carbon Border Adjustment Mechanism Management Platform"
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "chat": "AI Assistant",
+        "aiInsights": "AI Insights",
+        "companies": "Companies",
+        "suppliers": "Suppliers",
+        "projects": "Projects",
+        "documents": "Documents",
+        "team": "Team",
+        "emissions": "Emission Analysis",
+        "cbam": "CBAM Calculator",
+        "comparison": "Comparison",
+        "compliance": "Compliance",
+        "scenarios": "Scenarios",
+        "visualization": "Visualization",
+        "greenCredit": "Green Credit",
+        "hedging": "Hedging",
+        "calendar": "Calendar",
+        "reports": "Reports",
+        "performance": "Performance",
+        "admin": "Admin",
+        "settings": "Settings",
+        "audit": "Audit",
+        "help": "Help"
+    },
+    "sidebar": {
+        "mainMenu": "Main Menu",
+        "management": "Management",
+        "analysis": "Analysis",
+        "finance": "Finance",
+        "other": "Other",
+        "logout": "Logout"
+    },
+    "auth": {
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "forgotPassword": "Forgot Password",
+        "resetPassword": "Reset Password",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "fullName": "Full Name",
+        "rememberMe": "Remember Me",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?"
+    },
+    "dashboard": {
+        "totalCompanies": "Total Companies",
+        "totalEmissions": "Total Emissions",
+        "estimatedCost": "Estimated CBAM Cost",
+        "highRisk": "High Risk",
+        "emissionTrend": "Monthly Emission Trend",
+        "sectorDistribution": "Sector Distribution",
+        "cbamProjection": "CBAM Cost Projection",
+        "quickQuery": "AI Assistant - Quick Query",
+        "companyStatus": "Company Status",
+        "summaryMetrics": "Summary Metrics",
+        "cbamTimeline": "CBAM Timeline",
+        "greenCreditSuggestions": "Green Credit Suggestions"
+    },
+    "chat": {
+        "placeholder": "Type your message...",
+        "send": "Send",
+        "selectProvider": "AI Provider",
+        "useRAG": "Use Knowledge Base",
+        "sources": "Sources"
+    },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "add": "Add",
+        "search": "Search",
+        "filter": "Filter",
+        "export": "Export",
+        "import": "Import",
+        "all": "All",
+        "none": "None",
+        "yes": "Yes",
+        "no": "No",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Info"
+    },
+    "settings": {
+        "profile": "Profile",
+        "notifications": "Notifications",
+        "preferences": "Preferences",
+        "security": "Security",
+        "language": "Language",
+        "theme": "Theme",
+        "darkMode": "Dark Mode",
+        "lightMode": "Light Mode"
+    },
+    "reports": {
+        "title": "Reports",
+        "generate": "Generate Report",
+        "download": "Download",
+        "type": {
+            "emission": "Emission",
+            "cbam": "CBAM",
+            "financial": "Financial"
+        }
+    },
+    "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Apr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dec"
+    }
+}

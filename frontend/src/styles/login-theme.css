@@ -1,0 +1,366 @@
+/* ============================================
+   CBAM Guard - New Login Theme (Garanti BBVA)
+   ============================================ */
+
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+/* Left Side - Form */
+.auth-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.auth-card-content {
+    width: 100%;
+    max-width: 440px;
+    padding: 3rem;
+    border-radius: 24px;
+    background: white;
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04); */
+    /* Clean look */
+}
+
+/* Header Section */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.auth-brand-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.auth-brand-badge span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bbva-gray-500);
+}
+
+.auth-brand-badge strong {
+    color: var(--bbva-green);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.auth-logo-animated {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Form Styles */
+.auth-body h2 {
+    font-size: 1.75rem;
+    color: var(--bbva-dark);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--bbva-gray-500);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--bbva-gray-700);
+    font-size: 0.9rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--bbva-gray-100);
+    border-radius: 12px;
+    background: var(--bbva-gray-100);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: var(--bbva-dark);
+    font-weight: 500;
+}
+
+.input-with-icon input:focus {
+    background: white;
+    border-color: var(--bbva-green);
+    box-shadow: 0 0 0 4px rgba(0, 135, 74, 0.1);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--bbva-gray-700);
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--bbva-green);
+    cursor: pointer;
+}
+
+.link {
+    color: var(--bbva-green);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--bbva-green-dark);
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-block {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+
+.btn-guest {
+    margin-top: 1.5rem;
+    border: 2px dashed var(--bbva-gray-300);
+    color: var(--bbva-gray-500);
+}
+
+.btn-guest:hover {
+    border-color: var(--bbva-green);
+    color: var(--bbva-green);
+    background: rgba(0, 135, 74, 0.05);
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--bbva-gray-300);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--bbva-gray-100);
+}
+
+.auth-divider span {
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Right Side - Info */
+.auth-info {
+    flex: 1;
+    background: linear-gradient(135deg, #00874A 0%, #004F2D 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem;
+    color: white;
+}
+
+.auth-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6z6 34V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.auth-info-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.auth-info h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.auth-info p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.check-icon {
+    background: white;
+    color: var(--bbva-green);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid var(--bbva-gray-300);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 0.12s transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--bbva-green);
+    border-color: var(--bbva-green);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .auth-container {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .auth-card {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .auth-card-content {
+        padding: 1.5rem;
+        box-shadow: none;
+    }
+
+    .auth-info {
+        padding: 3rem 1.5rem;
+        order: -1;
+        /* Show info first on mobile? or keep bottom */
+    }
+
+    .auth-info h2 {
+        font-size: 1.75rem;
+    }
+}

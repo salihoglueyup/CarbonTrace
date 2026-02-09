@@ -1,0 +1,102 @@
+# ===================================
+# CBAM Guard - Docker Compose
+# ===================================
+# Geliştirme ve production ortamları için Docker yapılandırması
+
+version: '3.8'
+
+services:
+  # =================================
+  # Backend (FastAPI)
+  # =================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cbam-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:///./cbam_guard.db
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    volumes:
+      - ./backend:/app
+      - backend_data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # =================================
+  # Frontend (React/Vite)
+  # =================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cbam-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://backend:8000
+    restart: unless-stopped
+
+  # =================================
+  # PostgreSQL (Production için)
+  # =================================
+  # db:
+  #   image: postgres:15-alpine
+  #   container_name: cbam-db
+  #   environment:
+  #     POSTGRES_USER: cbam
+  #     POSTGRES_PASSWORD: secure_password_here
+  #     POSTGRES_DB: cbam_guard
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   restart: unless-stopped
+
+  # =================================
+  # Redis Cache (Opsiyonel)
+  # =================================
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: cbam-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+
+  # =================================
+  # Nginx Reverse Proxy (Production)
+  # =================================
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: cbam-nginx
+  #   ports:
+  #     - "443:443"
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - frontend
+  #     - backend
+  #   restart: unless-stopped
+
+volumes:
+  backend_data:
+  # postgres_data:
+  # redis_data:
+
+networks:
+  default:
+    name: cbam-network

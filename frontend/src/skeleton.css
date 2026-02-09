@@ -1,0 +1,218 @@
+/* ============================================
+   Skeleton Loading Styles
+   ============================================ */
+
+/* Base Skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Text Skeleton */
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+/* Avatar Skeleton */
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.skeleton-avatar.lg {
+    width: 64px;
+    height: 64px;
+}
+
+/* Button Skeleton */
+.skeleton-button {
+    height: 40px;
+    width: 120px;
+    border-radius: 8px;
+}
+
+/* Card Skeleton */
+.skeleton-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.skeleton-header {
+    height: 24px;
+    width: 60%;
+    margin-bottom: 16px;
+}
+
+/* Table Skeleton */
+.skeleton-table {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.skeleton-table-header {
+    height: 40px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.skeleton-table-row {
+    height: 48px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+/* Chart Skeleton */
+.skeleton-chart {
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* Stats Grid Skeleton */
+.skeleton-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.skeleton-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100px;
+}
+
+/* Dashboard Skeleton */
+.skeleton-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Dark Mode Skeleton */
+[data-theme="dark"] .skeleton,
+.dark-mode .skeleton {
+    background: linear-gradient(90deg, #374151 25%, #4B5563 50%, #374151 75%);
+    background-size: 200% 100%;
+}
+
+[data-theme="dark"] .skeleton-card,
+.dark-mode .skeleton-card,
+[data-theme="dark"] .skeleton-table,
+.dark-mode .skeleton-table {
+    background: #1F2937;
+}
+
+/* Skeleton with fade-in complete animation */
+.skeleton-loaded {
+    animation: skeletonFadeOut 0.3s ease forwards;
+}
+
+@keyframes skeletonFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Page Transition Animation */
+.page-transition-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Staggered List Animation */
+.stagger-list>* {
+    animation: staggerIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+@keyframes staggerIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stagger-list>*:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.stagger-list>*:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.stagger-list>*:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.stagger-list>*:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.stagger-list>*:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.stagger-list>*:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.stagger-list>*:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.stagger-list>*:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+.stagger-list>*:nth-child(9) {
+    animation-delay: 0.45s;
+}
+
+.stagger-list>*:nth-child(10) {
+    animation-delay: 0.5s;
+}

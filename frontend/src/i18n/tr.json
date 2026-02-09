@@ -1,0 +1,129 @@
+{
+    "app": {
+        "title": "CarbonTrace",
+        "subtitle": "Karbon Sınır Düzenleme Mekanizması Yönetim Platformu"
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "chat": "AI Asistan",
+        "aiInsights": "AI Öngörüler",
+        "companies": "Şirketler",
+        "suppliers": "Tedarikçiler",
+        "projects": "Projeler",
+        "documents": "Dokümanlar",
+        "team": "Takım",
+        "emissions": "Emisyon Analizi",
+        "cbam": "CBAM Hesaplayıcı",
+        "comparison": "Karşılaştırma",
+        "compliance": "Uyumluluk",
+        "scenarios": "Senaryo",
+        "visualization": "Görselleştirme",
+        "financialProjection": "Maliyet Projeksiyonu",
+        "greenCredit": "Yeşil Kredi",
+        "hedging": "Hedging",
+        "calendar": "Takvim",
+        "reports": "Raporlar",
+        "performance": "Performans",
+        "admin": "Admin",
+        "settings": "Ayarlar",
+        "audit": "Denetim",
+        "help": "Yardım"
+    },
+    "sidebar": {
+        "mainMenu": "Ana Menü",
+        "management": "Yönetim",
+        "analysis": "Analiz",
+        "finance": "Finans",
+        "other": "Diğer",
+        "logout": "Çıkış Yap"
+    },
+    "auth": {
+        "login": "Giriş Yap",
+        "register": "Kayıt Ol",
+        "logout": "Çıkış Yap",
+        "forgotPassword": "Şifremi Unuttum",
+        "resetPassword": "Şifre Sıfırla",
+        "email": "E-posta",
+        "password": "Şifre",
+        "confirmPassword": "Şifre Tekrar",
+        "fullName": "Ad Soyad",
+        "rememberMe": "Beni Hatırla",
+        "noAccount": "Hesabınız yok mu?",
+        "hasAccount": "Zaten hesabınız var mı?"
+    },
+    "dashboard": {
+        "totalCompanies": "Toplam Şirket",
+        "totalEmissions": "Toplam Emisyon",
+        "estimatedCost": "Tahmini CBAM Maliyeti",
+        "highRisk": "Yüksek Riskli",
+        "emissionTrend": "Aylık Emisyon Trendi",
+        "sectorDistribution": "Sektörel Dağılım",
+        "cbamProjection": "CBAM Maliyet Projeksiyonu",
+        "quickQuery": "AI Asistan - Hızlı Sorgulama",
+        "companyStatus": "Şirket Durumu",
+        "summaryMetrics": "Özet Metrikler",
+        "cbamTimeline": "CBAM Takvimi",
+        "greenCreditSuggestions": "Yeşil Kredi Önerileri"
+    },
+    "chat": {
+        "placeholder": "Mesajınızı yazın...",
+        "send": "Gönder",
+        "selectProvider": "AI Sağlayıcı",
+        "useRAG": "Bilgi Tabanı Kullan",
+        "sources": "Kaynaklar"
+    },
+    "common": {
+        "save": "Kaydet",
+        "cancel": "İptal",
+        "delete": "Sil",
+        "edit": "Düzenle",
+        "add": "Ekle",
+        "search": "Ara",
+        "filter": "Filtrele",
+        "export": "Dışa Aktar",
+        "import": "İçe Aktar",
+        "all": "Tümü",
+        "none": "Hiçbiri",
+        "yes": "Evet",
+        "no": "Hayır",
+        "loading": "Yükleniyor...",
+        "error": "Hata",
+        "success": "Başarılı",
+        "warning": "Uyarı",
+        "info": "Bilgi"
+    },
+    "settings": {
+        "profile": "Profil",
+        "notifications": "Bildirimler",
+        "preferences": "Tercihler",
+        "security": "Güvenlik",
+        "language": "Dil",
+        "theme": "Tema",
+        "darkMode": "Koyu Mod",
+        "lightMode": "Açık Mod"
+    },
+    "reports": {
+        "title": "Raporlar",
+        "generate": "Rapor Oluştur",
+        "download": "İndir",
+        "type": {
+            "emission": "Emisyon",
+            "cbam": "CBAM",
+            "financial": "Finansal"
+        }
+    },
+    "months": {
+        "jan": "Oca",
+        "feb": "Şub",
+        "mar": "Mar",
+        "apr": "Nis",
+        "may": "May",
+        "jun": "Haz",
+        "jul": "Tem",
+        "aug": "Ağu",
+        "sep": "Eyl",
+        "oct": "Eki",
+        "nov": "Kas",
+        "dec": "Ara"
+    }
+}
