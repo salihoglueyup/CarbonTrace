@@ -1,4 +1,4 @@
-# 🛡️ CBAM Guard (CarbonTrace)
+#  CarbonTrace
 
 <div align="center">
 
